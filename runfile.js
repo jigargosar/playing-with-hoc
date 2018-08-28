@@ -1,5 +1,5 @@
-import { run } from 'runjs'
-import { assert } from './src/lib/assert'
+import {run} from 'runjs'
+import {assert} from './src/lib/assert'
 
 process.env['REACT_EDITOR'] = 'webstorm'
 
@@ -20,7 +20,7 @@ export const ya = yarnAdd
 
 export function createConfigOverridesJS() {
   run(`cp -f templates/config-overrides.js .`)
-  // run(`git add .`)
+  run(`git add .`)
   // run(`git commit -m 'added config'`)
 }
 export const rari = createConfigOverridesJS
