@@ -56,7 +56,7 @@ export default props => {
         <Layout
           {...props}
           routes={nav}
-          logo={<X0 size={24} color='magenta' />}
+          // logo={<X0 size={24} color='magenta' />}
         />
       </RebassProvider>
     </ScopeProvider>)
