@@ -45,3 +45,7 @@ export function rewired(cmdName, ...options) {
 export const dev = () => {
   rewired('start')
 }
+
+export function xx(){
+  run(`x0 docs --open --port 3100`)
+}
