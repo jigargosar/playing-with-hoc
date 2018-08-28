@@ -4,7 +4,7 @@ import {assert} from './src/lib/assert'
 process.env['REACT_EDITOR'] = 'webstorm'
 
 
-export function installCommonPackages() {
+export function yarnAdd() {
   run(
     `yarn add \\
     react-app-rewired \\
@@ -13,11 +13,11 @@ export function installCommonPackages() {
     radium \\
     ramda tachyons nanoid prop-types recompose \\
     husky lint-staged nodemon plop \\
-    runjs cross-env \\
+    cross-env \\
     `,
   )
 }
-export const yi = installCommonPackages
+export const ya = installCommonPackages
 
 
 export function createConfigOverridesJS() {
