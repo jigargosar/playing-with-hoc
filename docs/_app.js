@@ -11,7 +11,7 @@ import {Link} from 'react-router-dom'
 import {ScopeProvider, SidebarLayout} from '@compositor/x0/components'
 import theme from './_theme'
 import {sortBy} from 'ramda'
-// import "tachyons"
+import "tachyons"
 
 const navOrder = ['index', 'introduction', 'hoc', 'no-seriously']
 const pageNames = {
@@ -46,10 +46,8 @@ export default props => {
 
   return (
     <div
-      className={'system-sans'}
-      style={{
-        fontFamily: `-apple-system, BlinkMacSystemFont, 'avenir next', avenir, 'helvetica neue', helvetica, ubuntu, roboto, noto, 'segoe ui', arial, sans-serif`,
-      }}
+      className={'code'}
+
     >
       <ScopeProvider scope={scope}>
         <RebassProvider theme={theme}>
