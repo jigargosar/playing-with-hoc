@@ -13,6 +13,7 @@ export function yarnAdd() {
     ramda tachyons nanoid prop-types recompose \\
     husky lint-staged nodemon plop \\
     cross-env \\
+    mobx mobx-react \\
     `,
   )
 }
