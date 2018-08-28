@@ -7,4 +7,4 @@ import theme from './_theme'
 
 
 export default props =>
-  <SidebarLayout {...props} title={`The name's Order... Higher Order`}/>
+  <SidebarLayout {...props} title={`Higher Order C... WAT!!!`}/>
