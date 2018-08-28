@@ -62,5 +62,6 @@ export function alias() {
 export function deploy() {
   build()
   deployO()
+  alias()
 }
 export const d = deploy
