@@ -7,6 +7,14 @@ export function hello(name = 'Mysterious') {
   console.log(`Hello ${name}!`)
 }
 
+export function gitInit() {
+  run(`echo '.idea/workspace.xml' >> .gitignore`)
+  run(`git init && git add .  && git commit -m 'git init'`)
+  run(`git add .  && git commit -m 'git init'`)
+  run(`git commit -m 'git init'`)
+
+}
+
 export function installCommonPackages() {
   run(
     `yarn add \\
@@ -23,13 +31,10 @@ export function installCommonPackages() {
 
 export const i = installCommonPackages
 
-export function gitInit() {
-  run(`echo '.idea/workspace.xml' >> .gitignore`)
-  run(`git init && git add .  && git commit -m 'git init'`)
-  run(`git add .  && git commit -m 'git init'`)
-  run(`git commit -m 'git init'`)
-
+export function createConfigOverridesJS() {
+  run(`cp templates/config-overrides.js .`)
 }
+
 
 export function rewired(cmdName, ...options) {
   assert(['start', 'build', 'test'].includes(cmdName))
@@ -42,6 +47,3 @@ export const dev = () => {
   rewired(cmdName)
 }
 
-export function createConfigOverridesJS() {
-  run(`cp templates/config-overrides.js .`)
-}
