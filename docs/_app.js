@@ -19,7 +19,7 @@ const navOrder = [
 ]
 const pageNames = {
   index: 'Home',
-  'hoc-wat':'HOC WAT!!!',
+  'hoc':'HOC',
   'cli-options': 'CLI Options'
 }
 
@@ -57,6 +57,7 @@ export default props => {
         <Layout
           {...props}
           routes={nav}
+          title={'HOC'}
           // logo={<X0 size={24} color='magenta' />}
         />
       </RebassProvider>
