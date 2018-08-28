@@ -20,7 +20,8 @@ export const ya = yarnAdd
 
 export function createConfigOverridesJS() {
   run(`cp -f templates/config-overrides.js .`)
-  run(`git add `)
+  // run(`git add .`)
+  // run(`git commit -m 'added config'`)
 }
 export const rari = createConfigOverridesJS
 
