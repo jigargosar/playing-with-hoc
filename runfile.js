@@ -46,7 +46,7 @@ export const dev = () => {
   rewired('start')
 }
 
-export function xx(){
+export function xx() {
   run(`x0 docs --open --port 3100`)
 }
 export function build() {
@@ -60,4 +60,4 @@ export function deploy() {
   build()
   deployO()
 }
-
+export const d = deploy
