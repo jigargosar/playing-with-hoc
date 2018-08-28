@@ -49,3 +49,6 @@ export const dev = () => {
 export function xx(){
   run(`x0 docs --open --port 3100`)
 }
+export function build() {
+  run(`x0 build docs`)
+}
