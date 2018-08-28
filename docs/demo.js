@@ -11,6 +11,7 @@ export default class extends React.Component {
       <Fragment>
         <h1>Demo</h1>
         <p>WAT!!!</p>
+        <h1>LivePreview</h1>
         <LivePreview code={code} />
       </Fragment>
     )
