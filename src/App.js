@@ -2,6 +2,10 @@ import React, {Component, Fragment} from 'react'
 import {GlobalStyles} from './GlobalStyles'
 import * as xr from 'mobx-react'
 
+function Page() {
+  return <Fragment>{'EmptyPage'}</Fragment>
+}
+
 class App extends Component {
   state = {
     hasError: false,
