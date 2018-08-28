@@ -13,14 +13,15 @@ import theme from './_theme'
 import {sortBy} from "ramda";
 
 const navOrder = [
+  'index',
   'introduction',
   'hoc',
   'no-seriously'
 ]
 const pageNames = {
   index: 'Home',
-  'hoc':'HOC',
-  'cli-options': 'CLI Options'
+  'hoc':'WAT',
+  'no-seriously':'But Seriously WAT!'
 }
 
 const sortRoutes = routes => [
