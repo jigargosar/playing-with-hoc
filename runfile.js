@@ -52,3 +52,12 @@ export function xx(){
 export function build() {
   run(`x0 build docs`)
 }
+export function deployO() {
+  run(`now dist`)
+}
+
+export function deploy() {
+  build()
+  deployO()
+}
+
