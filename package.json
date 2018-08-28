@@ -21,17 +21,15 @@
     "react-app-rewired": "^1.5.2",
     "react-scripts": "1.1.5",
     "recompose": "^0.28.2",
-    "tachyons": "^4.11.1"
+    "tachyons": "^4.11.1",
+    "@compositor/x0": "^6.0.5",
+    "runjs": "^4.3.2"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
-  },
-  "devDependencies": {
-    "@compositor/x0": "^6.0.5",
-    "runjs": "^4.3.2"
   },
   "babel": {
     "presets": [
