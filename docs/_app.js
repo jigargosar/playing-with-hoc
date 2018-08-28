@@ -3,15 +3,16 @@
 import React from 'react'
 // noinspection ES6UnusedImports,NpmUsedModulesInstalled,ES6CheckImport
 // noinspection ES6UnusedImports,NpmUsedModulesInstalled,ES6CheckImport
-import * as scope from 'rebass'
-import {Box, Container, Flex, Provider as RebassProvider} from 'rebass'
+import * as rebassScope from 'rebass'
+import {Box, Container, Flex, h1, Provider as RebassProvider} from 'rebass'
+import createMarkDownScope from '@rebass/markdown'
 // noinspection ES6UnusedImports,NpmUsedModulesInstalled,ES6CheckImport
 import {Link} from 'react-router-dom'
 //
 import {ScopeProvider, SidebarLayout} from '@compositor/x0/components'
 import theme from './_theme'
-import {sortBy} from 'ramda'
-import "tachyons"
+import {merge, sortBy} from 'ramda'
+import 'tachyons'
 
 const navOrder = ['index', 'introduction', 'hoc', 'no-seriously']
 const pageNames = {
@@ -37,19 +38,21 @@ const sortRoutes = routes =>
 const LandingLayout = SidebarLayout
 
 export default props => {
-  const { routes, route } = props
-  const { layout } = (route && route.props) || {}
+  const {routes, route} = props
+  const {layout} = (route && route.props) || {}
 
   const Layout = layout === 'landing' ? LandingLayout : SidebarLayout
 
   const nav = sortRoutes(routes)
-
+  console.log('rebassScope', rebassScope)
   return (
-    <div
-      className={'code'}
-
-    >
-      <ScopeProvider scope={scope}>
+    <div className={'code'}>
+      <ScopeProvider scope={merge(rebassScope, createMarkDownScope({
+        h1: {
+          fontSize: [5, 6, 7],
+          color: 'tomato'
+        }
+      }))}>
         <RebassProvider theme={theme}>
           <Layout
             {...props}
