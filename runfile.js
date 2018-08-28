@@ -38,6 +38,10 @@ export function rewired(cmdName, ...options) {
 }
 
 export const dev = () => {
-  var cmdName = 'start'
+  const cmdName = 'start'
   rewired(cmdName)
+}
+
+export function createConfigOverridesJS() {
+  run(`cp templates/config-overrides.js .`)
 }
