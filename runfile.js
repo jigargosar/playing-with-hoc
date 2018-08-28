@@ -9,8 +9,8 @@ export function hello(name = 'Mysterious') {
 
 export function gitInit() {
   run(`cp -f templates/.gitignore .gitignore`)
-  run(`git init && git add .  && git commit -m 'git init'`)
-  run(`git add .  && git commit -m 'git init'`)
+  run(`git init`)
+  run(`git add .`)
   run(`git commit -m 'git init'`)
 }
 
