@@ -3,16 +3,6 @@ import {assert} from './src/lib/assert'
 
 process.env['REACT_EDITOR'] = 'webstorm'
 
-export function hello(name = 'Mysterious') {
-  console.log(`Hello ${name}!`)
-}
-
-export function gitInit() {
-  run(`cp -f templates/.gitignore .gitignore`)
-  run(`git init`)
-  run(`git add .`)
-  run(`git commit -m 'git init'`)
-}
 
 export function installCommonPackages() {
   run(
@@ -27,12 +17,23 @@ export function installCommonPackages() {
     `,
   )
 }
+export const yi = installCommonPackages
 
-export const i = installCommonPackages
 
 export function createConfigOverridesJS() {
   run(`cp templates/config-overrides.js .`)
 }
+export const rari = createConfigOverridesJS
+
+export function gitInit() {
+  run(`cp -f templates/.gitignore .gitignore`)
+  run(`git init`)
+  run(`git add .`)
+  run(`git commit -m 'git init'`)
+}
+
+
+export const gi = gitInit
 
 
 export function rewired(cmdName, ...options) {
