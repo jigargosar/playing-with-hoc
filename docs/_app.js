@@ -14,7 +14,8 @@ import {sortBy} from "ramda";
 
 const navOrder = [
   'introduction',
-  'hoc'
+  'hoc',
+  'no-seriously'
 ]
 const pageNames = {
   index: 'Home',
