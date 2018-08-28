@@ -12,7 +12,6 @@ export function gitInit() {
   run(`git init && git add .  && git commit -m 'git init'`)
   run(`git add .  && git commit -m 'git init'`)
   run(`git commit -m 'git init'`)
-
 }
 
 export function installCommonPackages() {
