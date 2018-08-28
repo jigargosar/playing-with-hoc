@@ -18,6 +18,7 @@
     "power-assert": "^1.6.0",
     "prop-types": "^15.6.2",
     "radium": "^0.24.1",
+    "radium-loader": "^1.0.10",
     "ramda": "^0.25.0",
     "react": "^16.4.2",
     "react-app-rewired": "^1.5.2",
