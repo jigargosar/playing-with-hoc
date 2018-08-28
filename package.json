@@ -51,7 +51,7 @@
     }
   },
   "lint-staged": {
-    "*.{js,json,css,md}": ["prettier --config package.json --write", "git add"]
+    "*.{js,json,css,md,mdx}": ["prettier --config package.json --write", "git add"]
   },
   "x0": {
     "title": "Playing with HOC, WAT!"
