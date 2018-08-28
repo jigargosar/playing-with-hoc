@@ -55,6 +55,9 @@ export function build() {
 export function deployO() {
   run(`now dist`)
 }
+export function alias() {
+  run(`now alias`,{cwd:'dist'})
+}
 
 export function deploy() {
   build()
