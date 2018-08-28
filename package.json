@@ -62,6 +62,6 @@
   "now": {
     "name": "playing-with-hoc",
     "alias": "playing-with-hoc",
-    "public": "dist"
+    "type":"static"
   }
 }
