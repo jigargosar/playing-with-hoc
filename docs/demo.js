@@ -1,5 +1,5 @@
 import React, {Fragment} from 'react'
-import {LivePreview} from '@compositor/x0/components'
+import {LiveEditor, LivePreview} from '@compositor/x0/components'
 
 const code = `
 <button>Hello</button>
@@ -13,6 +13,8 @@ export default class extends React.Component {
         <p>WAT!!!</p>
         <h1>LivePreview</h1>
         <LivePreview code={code} />
+        <h1>LivePreview</h1>
+        <LiveEditor code={code} />
       </Fragment>
     )
   }
