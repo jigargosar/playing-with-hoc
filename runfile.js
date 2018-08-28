@@ -8,7 +8,7 @@ export function hello(name = 'Mysterious') {
 }
 
 export function gitInit() {
-  run(`echo '.idea/workspace.xml' >> .gitignore`)
+  run(`cp -f templates/.gitignore .gitignore`)
   run(`git init && git add .  && git commit -m 'git init'`)
   run(`git add .  && git commit -m 'git init'`)
   run(`git commit -m 'git init'`)
