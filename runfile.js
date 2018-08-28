@@ -23,6 +23,14 @@ export function installCommonPackages() {
 
 export const i = installCommonPackages
 
+export function gitInit() {
+  run(`echo '.idea/workspace.xml' >> .gitignore`)
+  run(`git init && git add .  && git commit -m 'git init'`)
+  run(`git add .  && git commit -m 'git init'`)
+  run(`git commit -m 'git init'`)
+
+}
+
 export function rewired(cmdName, ...options) {
   assert(['start', 'build', 'test'].includes(cmdName))
   const command = `react-app-rewired ${cmdName} `
