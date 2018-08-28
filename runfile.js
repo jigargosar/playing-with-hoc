@@ -1,5 +1,5 @@
-import { run } from 'runjs'
-import { assert } from './src/lib/assert'
+import {run} from 'runjs'
+import {assert} from './src/lib/assert'
 
 process.env['REACT_EDITOR'] = 'webstorm'
 
@@ -43,7 +43,6 @@ export function rewired(cmdName, ...options) {
 }
 
 export const dev = () => {
-  const cmdName = 'start'
-  rewired(cmdName)
+  rewired('start')
 }
 
