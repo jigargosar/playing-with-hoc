@@ -10,57 +10,57 @@ import {Link} from 'react-router-dom'
 //
 import {ScopeProvider, SidebarLayout} from '@compositor/x0/components'
 import theme from './_theme'
-import {sortBy} from "ramda";
+import {sortBy} from 'ramda'
+// import "tachyons"
 
-const navOrder = [
-  'index',
-  'introduction',
-  'hoc',
-  'no-seriously'
-]
+const navOrder = ['index', 'introduction', 'hoc', 'no-seriously']
 const pageNames = {
   index: 'Home',
-  'hoc':'WAT',
-  'no-seriously':'But Seriously WAT!'
+  hoc: 'WAT',
+  'no-seriously': 'But Seriously WAT!',
 }
 
-const sortRoutes = routes => [
-  ...sortBy(a => {
-    const i = navOrder.indexOf(a.name)
-    return i < 0 ? Infinity : i
-  }, routes)
-].map(route => {
-  if (!pageNames[route.name]) return route
-  return {
-    ...route,
-    name: pageNames[route.name]
-  }
-})
+const sortRoutes = routes =>
+  [
+    ...sortBy(a => {
+      const i = navOrder.indexOf(a.name)
+      return i < 0 ? Infinity : i
+    }, routes),
+  ].map(route => {
+    if (!pageNames[route.name]) return route
+    return {
+      ...route,
+      name: pageNames[route.name],
+    }
+  })
 
 const LandingLayout = SidebarLayout
 
 export default props => {
-  const {
-    routes,
-    route,
-  } = props
+  const { routes, route } = props
   const { layout } = (route && route.props) || {}
 
-  const Layout = layout === 'landing'
-    ? LandingLayout
-    : SidebarLayout
+  const Layout = layout === 'landing' ? LandingLayout : SidebarLayout
 
   const nav = sortRoutes(routes)
 
   return (
-    <ScopeProvider scope={scope}>
-      <RebassProvider theme={theme}>
-        <Layout
-          {...props}
-          routes={nav}
-          title={'HOC'}
-          // logo={<X0 size={24} color='magenta' />}
-        />
-      </RebassProvider>
-    </ScopeProvider>)
+    <div
+      className={'system-sans'}
+      style={{
+        fontFamily: `-apple-system, BlinkMacSystemFont, 'avenir next', avenir, 'helvetica neue', helvetica, ubuntu, roboto, noto, 'segoe ui', arial, sans-serif`,
+      }}
+    >
+      <ScopeProvider scope={scope}>
+        <RebassProvider theme={theme}>
+          <Layout
+            {...props}
+            routes={nav}
+            title={'HOC'}
+            // logo={<X0 size={24} color='magenta' />}
+          />
+        </RebassProvider>
+      </ScopeProvider>
+    </div>
+  )
 }
