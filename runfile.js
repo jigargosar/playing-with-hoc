@@ -8,12 +8,13 @@ export function yarnAdd() {
     `yarn add \\
     react-app-rewired \\
     power-assert babel-plugin-empower-assert babel-plugin-espower \\
-    @compositor/x0 \\
+    @compositor/x0 react-emotion\\
     radium \\
     ramda tachyons nanoid prop-types recompose \\
     husky lint-staged nodemon plop \\
     cross-env \\
     mobx mobx-react \\
+    faker chance \\
     `,
   )
 }
