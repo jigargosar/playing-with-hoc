@@ -55,5 +55,9 @@
   },
   "x0": {
     "title": "Playing with HOC"
+  },
+  "now": {
+    "name": "playing-with-hoc",
+    "alias": "playing-with-hoc"
   }
 }
