@@ -1,8 +1,7 @@
-import {run} from 'runjs'
-import {assert} from './src/lib/assert'
+import { run } from 'runjs'
+import { assert } from './src/lib/assert'
 
 process.env['REACT_EDITOR'] = 'webstorm'
-
 
 export function yarnAdd() {
   run(
@@ -17,11 +16,11 @@ export function yarnAdd() {
     `,
   )
 }
-export const ya = installCommonPackages
-
+export const ya = yarnAdd
 
 export function createConfigOverridesJS() {
-  run(`cp templates/config-overrides.js .`)
+  run(`cp -f templates/config-overrides.js .`)
+  run(`git add `)
 }
 export const rari = createConfigOverridesJS
 
@@ -31,10 +30,7 @@ export function gitInit() {
   run(`git add .`)
   run(`git commit -m 'git init'`)
 }
-
-
 export const gi = gitInit
-
 
 export function rewired(cmdName, ...options) {
   assert(['start', 'build', 'test'].includes(cmdName))
@@ -45,4 +41,3 @@ export function rewired(cmdName, ...options) {
 export const dev = () => {
   rewired('start')
 }
-

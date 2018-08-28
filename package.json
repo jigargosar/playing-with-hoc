@@ -3,9 +3,24 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "babel-plugin-empower-assert": "^1.4.0",
+    "babel-plugin-espower": "^2.4.0",
+    "cross-env": "^5.2.0",
+    "husky": "^0.14.3",
+    "lint-staged": "^7.2.2",
+    "nanoid": "^1.2.1",
+    "nodemon": "^1.18.3",
+    "plop": "^2.1.0",
+    "power-assert": "^1.6.0",
+    "prop-types": "^15.6.2",
+    "radium": "^0.24.1",
+    "ramda": "^0.25.0",
     "react": "^16.4.2",
+    "react-app-rewired": "^1.5.2",
     "react-dom": "^16.4.2",
-    "react-scripts": "1.1.5"
+    "react-scripts": "1.1.5",
+    "recompose": "^0.28.2",
+    "tachyons": "^4.11.1"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -14,13 +29,18 @@
     "eject": "react-scripts eject"
   },
   "devDependencies": {
-    "@compositor/x0": "^6.0.5"
+    "@compositor/x0": "^6.0.5",
+    "runjs": "^4.3.2"
   },
   "babel": {
-    "presets": ["env"]
+    "presets": [
+      "env"
+    ]
   },
   "runjs": {
-    "requires": ["./node_modules/babel-register"]
+    "requires": [
+      "./node_modules/babel-register"
+    ]
   },
   "prettier": {
     "trailingComma": "all",
@@ -36,6 +56,9 @@
     }
   },
   "lint-staged": {
-    "*.{js,json,css,md}": ["prettier --config package.json --write", "git add"]
+    "*.{js,json,css,md}": [
+      "prettier --config package.json --write",
+      "git add"
+    ]
   }
 }
