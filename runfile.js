@@ -15,7 +15,7 @@ export function yarnAdd() {
     cross-env \\
     mobx mobx-react \\
     faker chance \\
-    radium-loader classname \\
+    radium-loader classname nanoid\\
     `,
   )
 }
