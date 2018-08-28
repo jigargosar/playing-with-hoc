@@ -32,14 +32,10 @@
     "eject": "react-scripts eject"
   },
   "babel": {
-    "presets": [
-      "env"
-    ]
+    "presets": ["env"]
   },
   "runjs": {
-    "requires": [
-      "./node_modules/babel-register"
-    ]
+    "requires": ["./node_modules/babel-register"]
   },
   "prettier": {
     "trailingComma": "all",
@@ -55,13 +51,9 @@
     }
   },
   "lint-staged": {
-    "*.{js,json,css,md}": [
-      "prettier --config package.json --write",
-      "git add"
-    ]
+    "*.{js,json,css,md}": ["prettier --config package.json --write", "git add"]
   },
   "x0": {
-    "title": "Playing with HOC, WAT!",
-    "basename": "/"
+    "title": "Playing with HOC, WAT!"
   }
 }
