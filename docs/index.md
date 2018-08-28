@@ -1,8 +1,8 @@
 
 # Introducing HOC
 
-# wait... WAT!
 <!--
+# wait... WAT!
 <p align="center">
   <img src="../wat.gif"/>
 </p>
