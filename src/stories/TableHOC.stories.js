@@ -1,5 +1,5 @@
 import {storiesOf} from '@storybook/react'
-import React, {Fragment} from 'react'
+import React from 'react'
 import Table from '../components/Table'
 import {times} from 'ramda'
 
@@ -12,22 +12,14 @@ function allRows() {
 }
 
 function renderRows() {
-  return (
-    <Fragment>
+  return allRows().map(row => {
+    return (
       <tr>
-        <td>3</td>
-        <td>0.7</td>
+        <td>{`${row.name}`}</td>
+        <td>{`${row.balance}`}</td>
       </tr>
-      {allRows().map(row => {
-        return (
-          <Fragment>
-            <td>{`${row.name}`}</td>
-            <td>{`${row.balance}`}</td>
-          </Fragment>
-        )
-      })}
-    </Fragment>
-  )
+    )
+  })
 }
 
 export function loadTableHOCStories() {
