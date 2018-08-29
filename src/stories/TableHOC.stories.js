@@ -1,20 +1,7 @@
 import {storiesOf} from '@storybook/react'
 import React from 'react'
 import Table from '../components/Table'
-import {times} from 'ramda'
-import {fakeName, randomJobTitle, randomNumber} from '../lib/fake'
-
-function fakePersonRecord() {
-  return {
-    name: fakeName(),
-    balance: randomNumber(),
-    jobTitle: randomJobTitle(),
-  }
-}
-
-function fakePersonList() {
-  return times(fakePersonRecord, 100)
-}
+import {fakePersonList} from "./fake-helpers";
 
 export function loadTableHOCStories() {
   storiesOf('HOC/Table', module).add('with basic content', () => (
