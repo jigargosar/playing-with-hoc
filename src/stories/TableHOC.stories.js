@@ -9,19 +9,16 @@ export function loadTableHOCStories() {
         <caption>A Basic table</caption>
         <thead>
           <tr>
-            <th />
             <th>Chars</th>
             <th>Popularity</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <th>Foo</th>
             <td>3</td>
             <td>0.7</td>
           </tr>
           <tr>
-            <th>Bar</th>
             <td>3</td>
             <td>0.4</td>
           </tr>
