@@ -2,10 +2,14 @@ import {storiesOf} from '@storybook/react'
 import React from 'react'
 import Table from '../components/Table'
 import {times} from 'ramda'
-import {fakeName, randomJobTitle, randomNumber} from "../lib/fake";
+import {fakeName, randomJobTitle, randomNumber} from '../lib/fake'
 
 function createPersonRow() {
-  return { name: fakeName(), balance: randomNumber(), jobTitle:randomJobTitle() }
+  return {
+    name: fakeName(),
+    balance: randomNumber(),
+    jobTitle: randomJobTitle(),
+  }
 }
 
 function allRows() {
@@ -24,16 +28,22 @@ function renderRows() {
   })
 }
 
+function renderHeader() {
+  return (
+    <tr>
+      <th>Name</th>
+      <th>Card</th>
+      <th>Account ($) Balance</th>
+    </tr>
+  )
+}
+
 export function loadTableHOCStories() {
   storiesOf('HOC/Table', module).add('with basic content', () => (
     <Table>
       <caption>A Basic table</caption>
       <thead>
-        <tr>
-          <th>Name</th>
-          <th>Card</th>
-          <th>Account ($) Balance</th>
-        </tr>
+        {renderHeader()}
       </thead>
       <tbody>{renderRows()}</tbody>
     </Table>
