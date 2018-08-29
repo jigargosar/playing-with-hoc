@@ -1,17 +1,14 @@
 import React, {Component} from 'react'
 import PropTypes from 'prop-types'
+import {Button as BaseButton} from 'reakit'
 
 class Button extends Component {
   render() {
     return (
-      <button
+      <BaseButton
         {...this.props}
         style={{
-          background: 'transparent',
-          border: 'none',
           cursor:'pointer',
-          padding:"0.3rem 0.5rem",
-          outline:'none'
         }}
       />
     )
