@@ -23,8 +23,8 @@ export function loadTableHOCStories() {
       <caption>A Basic table</caption>
       <thead>
         <tr>
-          <th>Chars</th>
-          <th>Popularity</th>
+          <th>Name</th>
+          <th>Account Balance</th>
         </tr>
       </thead>
       <tbody>{renderRows()}</tbody>
