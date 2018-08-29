@@ -1,6 +1,7 @@
 import {storiesOf} from '@storybook/react'
 import React from 'react'
 import Table from '../components/Table'
+import {fakePersonList} from './fake-helpers'
 
 export function loadTableStories() {
   storiesOf('Helper Components/Table', module)
@@ -61,6 +62,28 @@ export function loadTableStories() {
             <td>0.002</td>
             <td>43%</td>
           </tr>
+        </tbody>
+      </Table>
+    ))
+    .add('with basic content', () => (
+      <Table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Job Title</th>
+            <th>Account ($) Balance</th>
+          </tr>
+        </thead>
+        <tbody>
+          {fakePersonList().map(row => {
+            return (
+              <tr>
+                {['name', 'jobTitle', 'balance'].map(rowDataKey => (
+                  <td>{`${row[rowDataKey]}`}</td>
+                ))}
+              </tr>
+            )
+          })}
         </tbody>
       </Table>
     ))
