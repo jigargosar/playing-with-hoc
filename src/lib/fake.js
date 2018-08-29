@@ -15,6 +15,10 @@ export function randomNumber() {
   return faker.random.number({min:-1000,max:10000})
 }
 
+export function randomCard() {
+  return faker.helpers.createCard()
+}
+
 export function fakeName() {
   return faker.name.findName()
 }
