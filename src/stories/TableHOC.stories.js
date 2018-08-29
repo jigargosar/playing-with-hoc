@@ -32,7 +32,7 @@ export function loadTableHOCStories() {
         <tr>
           <th>Name</th>
           <th>Card</th>
-          <th>$ Balance</th>
+          <th>Account ($) Balance</th>
         </tr>
       </thead>
       <tbody>{renderRows()}</tbody>
