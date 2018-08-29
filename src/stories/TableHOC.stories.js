@@ -16,8 +16,8 @@ function allRows() {
   return times(createPersonRow, 100)
 }
 
-function renderRows() {
-  return allRows().map(row => {
+function renderRows(rows) {
+  return rows.map(row => {
     return (
       <tr>
         <td>{`${row.name}`}</td>
@@ -42,7 +42,7 @@ export function loadTableHOCStories() {
   storiesOf('HOC/Table', module).add('with basic content', () => (
     <Table>
       <thead>{renderHeader()}</thead>
-      <tbody>{renderRows()}</tbody>
+      <tbody>{renderRows(allRows())}</tbody>
     </Table>
   ))
 }
