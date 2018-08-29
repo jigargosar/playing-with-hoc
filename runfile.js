@@ -46,6 +46,10 @@ export const dev = () => {
   run(`react-app-rewired start`)
 }
 
+export const sb = () => {
+  run(`yarn run storybook`)
+}
+
 export function xx() {
   run(`x0 docs --open --port 3100`)
 }
