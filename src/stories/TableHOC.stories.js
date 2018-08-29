@@ -16,6 +16,15 @@ function allRows() {
   return times(createPersonRow, 100)
 }
 
+export function loadTableHOCStories() {
+  storiesOf('HOC/Table', module).add('with basic content', () => (
+    <Table>
+      <thead>{renderHeader()}</thead>
+      <tbody>{renderRows(allRows())}</tbody>
+    </Table>
+  ))
+}
+
 function renderRows(rows) {
   return rows.map(row => {
     return (
@@ -36,13 +45,4 @@ function renderHeader() {
       <th>Account ($) Balance</th>
     </tr>
   )
-}
-
-export function loadTableHOCStories() {
-  storiesOf('HOC/Table', module).add('with basic content', () => (
-    <Table>
-      <thead>{renderHeader()}</thead>
-      <tbody>{renderRows(allRows())}</tbody>
-    </Table>
-  ))
 }
