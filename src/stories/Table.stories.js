@@ -65,26 +65,24 @@ export function loadTableStories() {
         </tbody>
       </Table>
     ))
-    .add('with basic content', () => (
-      <Table>
-        <thead>
+    .add('with fake rows content', () => <Table>
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Job Title</th>
+        <th>Account ($) Balance</th>
+      </tr>
+      </thead>
+      <tbody>
+      {fakePersonList().map(row => {
+        return (
           <tr>
-            <th>Name</th>
-            <th>Job Title</th>
-            <th>Account ($) Balance</th>
+            {['name', 'jobTitle', 'balance'].map(rowDataKey => (
+              <td>{`${row[rowDataKey]}`}</td>
+            ))}
           </tr>
-        </thead>
-        <tbody>
-          {fakePersonList().map(row => {
-            return (
-              <tr>
-                {['name', 'jobTitle', 'balance'].map(rowDataKey => (
-                  <td>{`${row[rowDataKey]}`}</td>
-                ))}
-              </tr>
-            )
-          })}
-        </tbody>
-      </Table>
-    ))
+        )
+      })}
+      </tbody>
+    </Table>)
 }
