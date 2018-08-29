@@ -11,6 +11,10 @@ export function randomWords() {
   return faker.random.word()
 }
 
+export function randomNumber() {
+  return faker.random.number({min:-1000,max:10000})
+}
+
 export function fakeName() {
   return faker.name.findName()
 }

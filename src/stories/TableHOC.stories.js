@@ -2,10 +2,10 @@ import {storiesOf} from '@storybook/react'
 import React from 'react'
 import Table from '../components/Table'
 import {times} from 'ramda'
-import {fakeName} from "../lib/fake";
+import {fakeName, randomNumber} from "../lib/fake";
 
 function createPersonRow() {
-  return { name: fakeName(), balance: 1000 }
+  return { name: fakeName(), balance: randomNumber() }
 }
 
 function allRows() {
