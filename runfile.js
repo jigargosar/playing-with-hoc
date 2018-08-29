@@ -43,7 +43,7 @@ export function rewired(cmdName, ...options) {
 }
 
 export const dev = () => {
-  rewired('start')
+  run(`react-app-rewired start`)
 }
 
 export function xx() {
