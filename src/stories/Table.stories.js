@@ -4,10 +4,33 @@ import Table from '../components/Table'
 
 export function loadTableStories() {
   storiesOf('Helper Components/Table', module)
-    .add('with no content', () => <Table />)
-    .add('with sample content', () => (
+    .add('with basic content', () => (
       <Table>
-        <caption>A test table with merged cells</caption>
+        <caption>A Basic table</caption>
+        <thead>
+          <tr>
+            <th />
+            <th>Chars</th>
+            <th>Popularity</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th>Foo</th>
+            <td>3</td>
+            <td>0.7</td>
+          </tr>
+          <tr>
+            <th>Bar</th>
+            <td>3</td>
+            <td>0.4</td>
+          </tr>
+        </tbody>
+      </Table>
+    ))
+    .add('with merged cells', () => (
+      <Table>
+        <caption>table with merged cells</caption>
         <colgroup>
           <col />
           <col />
