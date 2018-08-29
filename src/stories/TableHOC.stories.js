@@ -17,9 +17,10 @@ function renderRows(rows) {
     return <td>{`${data}`}</td>
   }
   return rows.map(row => {
+    let rowDataKeys = ['name', 'jobTitle', 'balance'];
     return (
       <tr>
-        {['name', 'jobTitle', 'balance'].map(rowDataKey =>
+        {rowDataKeys.map(rowDataKey =>
           renderCell(row[rowDataKey]),
         )}
       </tr>
