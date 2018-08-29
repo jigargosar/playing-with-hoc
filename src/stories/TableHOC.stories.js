@@ -4,7 +4,7 @@ import Table from '../components/Table'
 import {times} from 'ramda'
 import {fakeName, randomJobTitle, randomNumber} from '../lib/fake'
 
-function createPersonRow() {
+function fakePersonRecord() {
   return {
     name: fakeName(),
     balance: randomNumber(),
@@ -12,15 +12,15 @@ function createPersonRow() {
   }
 }
 
-function allRows() {
-  return times(createPersonRow, 100)
+function fakePersonList() {
+  return times(fakePersonRecord, 100)
 }
 
 export function loadTableHOCStories() {
   storiesOf('HOC/Table', module).add('with basic content', () => (
     <Table>
       <thead>{renderHeader()}</thead>
-      <tbody>{renderRows(allRows())}</tbody>
+      <tbody>{renderRows(fakePersonList())}</tbody>
     </Table>
   ))
 }
