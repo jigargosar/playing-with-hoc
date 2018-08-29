@@ -44,7 +44,7 @@ function renderHeader() {
   return (
     <tr>
       <th>Name</th>
-      <th>Card</th>
+      <th>Job Title</th>
       <th>Account ($) Balance</th>
     </tr>
   )
