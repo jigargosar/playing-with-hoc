@@ -2,6 +2,10 @@ import {storiesOf} from '@storybook/react'
 import React, {Fragment} from 'react'
 import Table from '../components/Table'
 
+function createPersonRow() {
+  return {name:"Foo", balance:1000}
+}
+
 function renderRows() {
   return (
     <Fragment>
@@ -24,7 +28,7 @@ export function loadTableHOCStories() {
       <thead>
         <tr>
           <th>Name</th>
-          <th>Account Balance</th>
+          <th>$ Balance</th>
         </tr>
       </thead>
       <tbody>{renderRows()}</tbody>
