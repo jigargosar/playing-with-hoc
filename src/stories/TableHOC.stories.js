@@ -26,12 +26,15 @@ export function loadTableHOCStories() {
 }
 
 function renderRows(rows) {
+  function renderCell(data) {
+    return <td>{`${data}`}</td>
+  }
   return rows.map(row => {
     return (
       <tr>
-        <td>{`${row.name}`}</td>
-        <td>{`${row.jobTitle}`}</td>
-        <td>{`${row.balance}`}</td>
+        {['name', 'jobTitle', 'balance'].map(rowDataKey =>
+          renderCell(row[rowDataKey]),
+        )}
       </tr>
     )
   })
