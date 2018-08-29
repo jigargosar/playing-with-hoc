@@ -2,6 +2,6 @@ import React from 'react'
 import {styled, Table as BaseTable} from 'reakit'
 
 const Table = styled(BaseTable)`
-  color:tomato;
+  // color:tomato;
 `
 export default Table
