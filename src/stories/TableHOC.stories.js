@@ -41,10 +41,7 @@ function renderHeader() {
 export function loadTableHOCStories() {
   storiesOf('HOC/Table', module).add('with basic content', () => (
     <Table>
-      <caption>A Basic table</caption>
-      <thead>
-        {renderHeader()}
-      </thead>
+      <thead>{renderHeader()}</thead>
       <tbody>{renderRows()}</tbody>
     </Table>
   ))
