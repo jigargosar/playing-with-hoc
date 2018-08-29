@@ -19,6 +19,10 @@ export function randomCard() {
   return faker.helpers.createCard()
 }
 
+export function randomJobTitle() {
+  return faker.name.jobTitle()
+}
+
 export function fakeName() {
   return faker.name.findName()
 }

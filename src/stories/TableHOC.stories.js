@@ -2,10 +2,10 @@ import {storiesOf} from '@storybook/react'
 import React from 'react'
 import Table from '../components/Table'
 import {times} from 'ramda'
-import {fakeName, randomCard, randomNumber} from "../lib/fake";
+import {fakeName, randomJobTitle, randomNumber} from "../lib/fake";
 
 function createPersonRow() {
-  return { name: fakeName(), balance: randomNumber(), card:randomCard() }
+  return { name: fakeName(), balance: randomNumber(), jobTitle:randomJobTitle() }
 }
 
 function allRows() {
@@ -17,7 +17,7 @@ function renderRows() {
     return (
       <tr>
         <td>{`${row.name}`}</td>
-        <td>{`${row.card}`}</td>
+        <td>{`${row.jobTitle}`}</td>
         <td>{`${row.balance}`}</td>
       </tr>
     )
