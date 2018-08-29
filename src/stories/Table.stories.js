@@ -4,7 +4,7 @@ import Table from '../styled-components/Table'
 import {fakePersonList} from './fake-helpers'
 
 export function loadTableStories() {
-  storiesOf('Helper Components/Table', module)
+  storiesOf('Styled Components/Table', module)
     .add('with basic content', () => (
       <Table>
         <caption>A Basic table</caption>
