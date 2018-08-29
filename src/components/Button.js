@@ -9,7 +9,8 @@ class Button extends Component {
         style={{
           background: 'transparent',
           border: 'none',
-          cursor:'pointer'
+          cursor:'pointer',
+          padding:"0.3rem 0.5rem"
         }}
       />
     )
