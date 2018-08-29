@@ -75,6 +75,7 @@
     "type": "static"
   },
   "devDependencies": {
+    "@compositor/x0": "^6.0.5",
     "@storybook/addon-actions": "^3.4.10",
     "@storybook/addon-links": "^3.4.10",
     "@storybook/addons": "^3.4.10",

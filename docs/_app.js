@@ -44,7 +44,6 @@ export default props => {
   const Layout = layout === 'landing' ? LandingLayout : SidebarLayout
 
   const nav = sortRoutes(routes)
-  console.log('rebassScope', rebassScope)
   return (
     <div className={'code'}>
       <ScopeProvider scope={merge(rebassScope, createMarkDownScope({
