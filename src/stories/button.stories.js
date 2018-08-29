@@ -1,5 +1,5 @@
 import {storiesOf} from "@storybook/react";
-import Button from "../components/Button";
+import Button from "../styled-components/Button";
 import {action} from "@storybook/addon-actions";
 import React from "react";
 

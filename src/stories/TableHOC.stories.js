@@ -1,6 +1,6 @@
 import {storiesOf} from '@storybook/react'
 import React from 'react'
-import Table from '../components/Table'
+import Table from '../styled-components/Table'
 import {fakePersonList} from "./fake-helpers";
 
 export function loadTableHOCStories() {
