@@ -1,6 +1,6 @@
 import React, {Component, Fragment} from 'react'
 import {GlobalStyles} from './GlobalStyles'
-import * as xr from 'mobx-react'
+import {observer} from 'mobx-react'
 
 function Page() {
   return <Fragment>{'EmptyPage'}</Fragment>
@@ -31,4 +31,4 @@ class App extends Component {
   }
 }
 
-export default xr.observer(App)
+export default observer(App)
