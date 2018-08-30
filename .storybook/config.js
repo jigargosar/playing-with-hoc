@@ -89,6 +89,7 @@ addDecorator((storyFn, context) => withConsole()(storyFn)(context))
 const req = require.context('../src', true, /\.stories\.js$/)
 
 function loadStories() {
+  require("tachyons")
   req.keys().forEach((filename) => req(filename))
 }
 
