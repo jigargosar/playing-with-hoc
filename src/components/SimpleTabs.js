@@ -1,32 +1,30 @@
 import React, {Component} from 'react'
 import {Block, Tabs} from 'reakit'
-import {merge} from 'ramda'
+import {addIndex, map, merge} from 'ramda'
 
 // import PropTypes from 'prop-types';
+const mapIndexed = addIndex(map);
 
 class SimpleTabs extends Component {
   render() {
-    const loop = true
+    const {tabs, loop=false} = this.props
     return (
       <Tabs.Container>
         {childProps => {
-          const tabs = merge(childProps, { loop })
+          const tapProps = merge(childProps, { loop })
           return (
             <Block>
               <Tabs>
-                <Tabs.Previous {...tabs}>{'<'}</Tabs.Previous>
-                <Tabs.Tab tab="first" {...tabs}>
-                  First
-                </Tabs.Tab>
-                <Tabs.Tab tab="second" {...tabs}>
-                  Second
-                </Tabs.Tab>
-                <Tabs.Next {...tabs}>{'>'}</Tabs.Next>
+                <Tabs.Previous {...tapProps}>{'<'}</Tabs.Previous>
+                {mapIndexed((content,idx)=><Tabs.Tab tab={`${idx}`} {...tapProps}>
+                  {content}
+                </Tabs.Tab>)(tabs)}
+                <Tabs.Next {...tapProps}>{'>'}</Tabs.Next>
               </Tabs>
-              <Tabs.Panel tab="first" {...tabs}>
+              <Tabs.Panel tab="first" {...tapProps}>
                 First
               </Tabs.Panel>
-              <Tabs.Panel tab="second" {...tabs}>
+              <Tabs.Panel tab="second" {...tapProps}>
                 Second
               </Tabs.Panel>
             </Block>

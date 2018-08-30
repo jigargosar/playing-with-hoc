@@ -4,5 +4,5 @@ import SimpleTabs from "../../components/SimpleTabs";
 
 storiesOf('Styled Components|SimpleTabs', module)
   .add('with basic content', () => (
-    <SimpleTabs/>
+    <SimpleTabs tabs={["First", "Second"]}/>
   ))
