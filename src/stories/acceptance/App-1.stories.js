@@ -5,7 +5,7 @@ import SimpleTabs from '../../components/SimpleTabs'
 
 storiesOf('Acceptance|App 1', module).add('with hardcoded table rows', () => (
   <SimpleTabs
-    tabHeaderList={['First Table', 'Second Table']}
+    tabHeaderList={['XYZ Corp. Inc.', 'Wonderland Inc.']}
     tabContentList={[
       <Table>
         <thead>
