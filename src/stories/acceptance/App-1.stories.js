@@ -38,14 +38,14 @@ storiesOf('Acceptance|App 1', module).add('with hardcoded table rows', () => (
         </thead>
         <tbody>
           <tr>
-            <td>Mr. Foo Jr.</td>
-            <td>Plumber</td>
-            <td>$10,000.00</td>
+            <td>Mr. Smith</td>
+            <td>Con Man</td>
+            <td>$10,000,000.00</td>
           </tr>
           <tr>
-            <td>Mr. Bar</td>
-            <td>CEO</td>
-            <td>$1.00</td>
+            <td>Mr. Jones</td>
+            <td>Project Lead</td>
+            <td>$99,999.00</td>
           </tr>
         </tbody>
       </Table>,
