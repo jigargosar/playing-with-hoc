@@ -1,9 +1,9 @@
 import {storiesOf} from '@storybook/react'
 import React from 'react'
-import Table from '../styled-components/Table'
-import {fakePersonList} from './fake-helpers'
+import Table from '../../styled-components/Table'
+import {fakePersonList} from '../fake-helpers'
 
-storiesOf('HOC/Table', module).add('with basic content', () => (
+storiesOf('Acceptance|Table', module).add('with basic content', () => (
   <Table>
     <thead>{renderHeader()}</thead>
     <tbody>{renderRows(fakePersonList())}</tbody>

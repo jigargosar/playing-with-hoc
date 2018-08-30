@@ -3,4 +3,4 @@ import "tachyons"
 import "../index.css"
 import "./styled-components/Button.stories";
 import "./styled-components/Table.stories";
-import "./TableHOC.stories";
+import "./acceptance/TableHOC.stories";
