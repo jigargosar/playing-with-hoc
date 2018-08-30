@@ -1,6 +1,6 @@
 import React from 'react';
 import "tachyons"
 import "../index.css"
-import "./button.stories";
-import "./Table.stories";
+import "./styled-components/Button.stories";
+import "./styled-components/Table.stories";
 import "./TableHOC.stories";
