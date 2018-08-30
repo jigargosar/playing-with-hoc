@@ -3,7 +3,7 @@ import Button from '../../styled-components/Button'
 import {action} from '@storybook/addon-actions'
 import React from 'react'
 
-storiesOf('Styled Components/Button', module)
+storiesOf('Styled Components|Button', module)
   .add('with text', () => (
     <Button onClick={action('clicked')}>Hello Button</Button>
   ))

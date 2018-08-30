@@ -3,7 +3,7 @@ import React from 'react'
 import Table from '../../styled-components/Table'
 import {fakePersonList} from '../fake-helpers'
 
-storiesOf('Styled Components/Table', module)
+storiesOf('Styled Components|Table', module)
   .add('with basic content', () => (
     <Table>
       <caption>A Basic table</caption>
