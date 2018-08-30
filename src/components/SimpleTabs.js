@@ -1,24 +1,27 @@
 import React, {Component} from 'react'
 import {Block, Tabs} from 'reakit'
-import {omit} from 'ramda'
+import {merge} from 'ramda'
 
 // import PropTypes from 'prop-types';
 
 class SimpleTabs extends Component {
   render() {
+    const loop = true
     return (
-      <Tabs.Container loop={false}>
+      <Tabs.Container>
         {childProps => {
-          const tabs = omit(['loop'])(childProps)
+          const tabs = merge(childProps, { loop })
           return (
             <Block>
               <Tabs>
+                <Tabs.Previous {...tabs}>{'<'}</Tabs.Previous>
                 <Tabs.Tab tab="first" {...tabs}>
                   First
                 </Tabs.Tab>
                 <Tabs.Tab tab="second" {...tabs}>
                   Second
                 </Tabs.Tab>
+                <Tabs.Next {...tabs}>{'>'}</Tabs.Next>
               </Tabs>
               <Tabs.Panel tab="first" {...tabs}>
                 First
@@ -26,8 +29,6 @@ class SimpleTabs extends Component {
               <Tabs.Panel tab="second" {...tabs}>
                 Second
               </Tabs.Panel>
-              <Tabs.Previous {...tabs}>Previous</Tabs.Previous>
-              <Tabs.Next {...tabs}>Next</Tabs.Next>
             </Block>
           )
         }}
