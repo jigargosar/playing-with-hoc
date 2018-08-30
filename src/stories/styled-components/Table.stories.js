@@ -72,7 +72,7 @@ storiesOf('Styled Components|Table', module)
           <tr>
             <th>Name</th>
             <th>Job Title</th>
-            <th>Account ($) Balance</th>
+            <th>Salary</th>
           </tr>
         </thead>
         <tbody>

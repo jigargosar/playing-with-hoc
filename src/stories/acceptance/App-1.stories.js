@@ -1,31 +1,28 @@
 import {storiesOf} from '@storybook/react'
 import React from 'react'
 import Table from '../../styled-components/Table'
-import {fakePersonList} from '../fake-helpers'
 
 storiesOf('Acceptance|App 1', module).add('with hardcoded table rows', () => (
   <Table>
-    <thead>{renderHeader()}</thead>
-    <tbody>{renderRows(fakePersonList())}</tbody>
+    <thead>
+      {
+        <tr>
+          <th>Name</th>
+          <th>Job Title</th>
+          <th>Salary</th>
+        </tr>
+      }
+    </thead>
+    <tbody>
+      <tr>
+        <td>Mr. Foo Jr.</td>
+        <td>Plumber</td>
+        <td>$10,000.00</td>
+      </tr><tr>
+        <td>Mr. Bar</td>
+        <td>CEO</td>
+        <td>$1.00</td>
+      </tr>
+    </tbody>
   </Table>
 ))
-
-function renderRows(rows) {
-  function renderCell(data) {
-    return <td>{`${data}`}</td>
-  }
-  return rows.map(row => {
-    let rowDataKeys = ['name', 'jobTitle', 'balance']
-    return <tr>{rowDataKeys.map(rowDataKey => renderCell(row[rowDataKey]))}</tr>
-  })
-}
-
-function renderHeader() {
-  return (
-    <tr>
-      <th>Name</th>
-      <th>Job Title</th>
-      <th>Account ($) Balance</th>
-    </tr>
-  )
-}

@@ -25,7 +25,7 @@ function renderHeader() {
     <tr>
       <th>Name</th>
       <th>Job Title</th>
-      <th>Account ($) Balance</th>
+      <th>Salary</th>
     </tr>
   )
 }
