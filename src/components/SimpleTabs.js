@@ -26,8 +26,8 @@ class SimpleTabs extends Component {
               <Tabs.Panel tab="second" {...tabs}>
                 Second
               </Tabs.Panel>
-              <Tabs.Next {...tabs}>Next</Tabs.Next>
               <Tabs.Previous {...tabs}>Previous</Tabs.Previous>
+              <Tabs.Next {...tabs}>Next</Tabs.Next>
             </Block>
           )
         }}
