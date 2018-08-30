@@ -80,8 +80,16 @@ setConsoleOptions({
 })
 addDecorator((storyFn, context) => withConsole()(storyFn)(context))
 
+// function loadStories() {
+//   require('../src/stories')
+// }
+// configure(loadStories, module)
+
+
+const req = require.context('../src', true, /\.stories\.js$/)
+
 function loadStories() {
-  require('../src/stories')
+  req.keys().forEach((filename) => req(filename))
 }
 
-configure(loadStories, module)
+configure(loadStories, module);
