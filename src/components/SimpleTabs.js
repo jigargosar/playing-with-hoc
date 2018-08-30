@@ -7,7 +7,16 @@ class SimpleTabs extends Component {
   render() {
     return (
       <Tabs.Container>
-        {({ register, unregister, isCurrent, show, next, previous }) => (
+        {({
+          register,
+          unregister,
+          isCurrent,
+          show,
+          next,
+          hasNext,
+          previous,
+          hasPrevious,
+        }) => (
           <Block>
             <Tabs>
               <Tabs.Tab
@@ -39,6 +48,12 @@ class SimpleTabs extends Component {
             <Tabs.Panel tab="second" isCurrent={isCurrent}>
               Second
             </Tabs.Panel>
+            <Tabs.Next next={next} hasNext={hasNext}>
+              Next
+            </Tabs.Next>
+            <Tabs.Previous previous={previous} hasPrevious={hasPrevious}>
+              Previous
+            </Tabs.Previous>
           </Block>
         )}
       </Tabs.Container>
