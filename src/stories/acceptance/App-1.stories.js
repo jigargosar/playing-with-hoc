@@ -3,7 +3,7 @@ import React from 'react'
 import Table from '../../styled-components/Table'
 import {fakePersonList} from '../fake-helpers'
 
-storiesOf('Acceptance|Table', module).add('with basic content', () => (
+storiesOf('Acceptance|App 1', module).add('with hardcoded table rows', () => (
   <Table>
     <thead>{renderHeader()}</thead>
     <tbody>{renderRows(fakePersonList())}</tbody>
