@@ -77,7 +77,9 @@
   "devDependencies": {
     "@compositor/x0": "^6.0.5",
     "@storybook/addon-actions": "^3.4.10",
+    "@storybook/addon-console": "^1.0.4",
     "@storybook/addon-links": "^3.4.10",
+    "@storybook/addon-options": "^3.4.10",
     "@storybook/addons": "^3.4.10",
     "@storybook/react": "^3.4.10",
     "babel-core": "^6.26.3",

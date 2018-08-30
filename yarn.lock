@@ -283,6 +283,12 @@
     react-inspector "^2.2.2"
     uuid "^3.2.1"
 
+"@storybook/addon-console@^1.0.4":
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/@storybook/addon-console/-/addon-console-1.0.4.tgz#726ed87152d0bfe39288885784d7846da914324e"
+  dependencies:
+    global "^4.3.2"
+
 "@storybook/addon-links@3.4.10", "@storybook/addon-links@^3.4.10":
   version "3.4.10"
   resolved "https://registry.yarnpkg.com/@storybook/addon-links/-/addon-links-3.4.10.tgz#db53d0a0b354e7f5e55195315f48f7045307a429"
@@ -291,6 +297,12 @@
     babel-runtime "^6.26.0"
     global "^4.3.2"
     prop-types "^15.6.1"
+
+"@storybook/addon-options@^3.4.10":
+  version "3.4.10"
+  resolved "https://registry.yarnpkg.com/@storybook/addon-options/-/addon-options-3.4.10.tgz#0b6ed3e22b7541a86a7c507ff80356d33784eda9"
+  dependencies:
+    babel-runtime "^6.26.0"
 
 "@storybook/addons@3.4.10", "@storybook/addons@^3.4.10":
   version "3.4.10"
