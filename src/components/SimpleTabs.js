@@ -1,13 +1,13 @@
 import React, {Component} from 'react'
 import {Block, Tabs} from 'reakit'
 import {addIndex, map, merge} from 'ramda'
+import PropTypes from 'prop-types'
 
-// import PropTypes from 'prop-types';
-const mapIndexed = addIndex(map);
+const mapIndexed = addIndex(map)
 
 class SimpleTabs extends Component {
   render() {
-    const {tabs, loop=false} = this.props
+    const { tabHeaderList, tabContentList, loop = false } = this.props
     return (
       <Tabs.Container>
         {childProps => {
@@ -16,17 +16,18 @@ class SimpleTabs extends Component {
             <Block>
               <Tabs>
                 <Tabs.Previous {...tapProps}>{'<'}</Tabs.Previous>
-                {mapIndexed((content,idx)=><Tabs.Tab tab={`${idx}`} {...tapProps}>
-                  {content}
-                </Tabs.Tab>)(tabs)}
+                {mapIndexed((content, idx) => (
+                  <Tabs.Tab tab={`${idx}`} {...tapProps}>
+                    {content}
+                  </Tabs.Tab>
+                ))(tabHeaderList)}
                 <Tabs.Next {...tapProps}>{'>'}</Tabs.Next>
               </Tabs>
-              <Tabs.Panel tab="first" {...tapProps}>
-                First
-              </Tabs.Panel>
-              <Tabs.Panel tab="second" {...tapProps}>
-                Second
-              </Tabs.Panel>
+              {mapIndexed((content, idx) => (
+                <Tabs.Panel tab={`${idx}`} {...tapProps}>
+                  {content}
+                </Tabs.Panel>
+              ))(tabContentList)}
             </Block>
           )
         }}
@@ -35,6 +36,14 @@ class SimpleTabs extends Component {
   }
 }
 
-SimpleTabs.propTypes = {}
+SimpleTabs.propTypes = {
+  tabHeaderList: PropTypes.arrayOf(PropTypes.node.isRequired).isRequired,
+  tabContentList: PropTypes.arrayOf(PropTypes.node.isRequired).isRequired,
+  loop: PropTypes.bool,
+}
+
+SimpleTabs.defaultProps = {
+  loop: true,
+}
 
 export default SimpleTabs
